@@ -1,21 +1,97 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main(){
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    int peça;
+    int i = 1;
+    int direcaoB; 
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    printf("Bem-Vindo ao jogo de Xadrez!!! \n");
+    printf("Escolha uma peça: \n");
+    printf("1. Torre \n");
+    printf("2. Bispo \n");
+    printf("3. Rainha \n");
+    printf("Digite sua escolha: ");
+    scanf("%d", &peça);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    switch (peça)
+    {
+        //Código da Torre
+        case 1: 
+            for (int i = 0; i < 5; i++)
+            {
+                printf("Direita \n");
+            }
+        break;
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+        //Código do Bispo
+        case 2:
+        printf("Escolha uma direção: \n");
+        printf("1. Cima, Direita \n");
+        printf("2. Cima, Esquerda \n");
+        printf("3. Baixo, Direita \n");
+        printf("4. Baixo, Esquerda\n");
+        printf("Digite sua escolha: ");
+        scanf("%d", &direcaoB);
+
+            //Escolha de direção do Bispo
+            switch (direcaoB)
+            {
+                case 1:
+                    while (i <= 5)
+                    {
+                        printf("Cima, Direita \n");
+                        i++;
+                    }
+                    break;
+
+                case 2:
+                    while (i <= 5)
+                    {
+                        printf("Cima, Esquerda \n");
+                        i++;
+                    }
+                    break;
+
+                case 3:
+                    while (i <= 5)
+                    {
+                        printf("Baixo, Direita \n");
+                        i++;
+                    }
+                    break;
+
+                case 4:
+                    while (i <= 5)
+                    {
+                        printf("Baixo, Esquerda \n");
+                        i++;
+                    }
+                    break;
+                        
+                default:
+                    printf("Opção inválida");
+                break;
+            }
+        break;
+
+
+        //Código da Rainha
+        case 3: 
+            do
+            {
+                printf("Esquerda \n", i);
+                i++;
+            } while (i <= 8);
+        break;
+    
+        default:
+        printf("Opção inválida");
+            break; 
+    }
+
+return 0;
+}
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
@@ -28,5 +104,4 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    return 0;
-}
+    
