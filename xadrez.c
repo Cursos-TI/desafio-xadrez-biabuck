@@ -87,6 +87,7 @@ int main(){
             } while (i <= 8);
         break;
 
+        // Código do cavalo (estrutura aninhada)
         case 4: 
             for (int i = 1; i <= 1; i++)
             {
