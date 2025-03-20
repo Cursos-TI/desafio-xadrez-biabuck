@@ -5,12 +5,14 @@ int main(){
     int pecas;
     int i = 1;
     int direcaoB; 
+    int j = 1;
 
     printf("Bem-Vindo ao jogo de Xadrez!!! \n");
     printf("Escolha uma peça: \n");
     printf("1. Torre \n");
     printf("2. Bispo \n");
     printf("3. Rainha \n");
+    printf("4. Cavalo \n");
     printf("Digite sua escolha: ");
     scanf("%d", &pecas);
 
@@ -83,6 +85,19 @@ int main(){
                 printf("Esquerda \n", i);
                 i++;
             } while (i <= 8);
+        break;
+
+        case 4: 
+            for (int i = 1; i <= 1; i++)
+            {
+                while (j <= 2)
+                {
+                    printf("Cima \n");
+                    j++;
+                }
+    
+                printf("Direita \n");
+            }
         break;
     
         default:
